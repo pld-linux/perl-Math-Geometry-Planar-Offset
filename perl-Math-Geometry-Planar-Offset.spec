@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Math
-%define	pnam	Geometry-Planar-Offset
+%define		pdir	Math
+%define		pnam	Geometry-Planar-Offset
 Summary:	Math::Geometry::Planar::Offset - calculate offset polygons
 Summary(pl):	Math::Geometry::Planar::Offset - obliczanie wielok±tów offsetowych
 Name:		perl-Math-Geometry-Planar-Offset
