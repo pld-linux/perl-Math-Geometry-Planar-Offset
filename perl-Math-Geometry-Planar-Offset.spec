@@ -10,8 +10,8 @@ Summary(pl):	Math::Geometry::Planar::Offset - obliczanie wielok±tów offsetowych
 Name:		perl-Math-Geometry-Planar-Offset
 Version:	1.02
 Release:	1
-# same as perl + changes must be documented
-License:	GPL or Artistic
+# same as perl (README says it is Artistic only)
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	6f3fa47796a6aea34dfa0d60f39b866c
