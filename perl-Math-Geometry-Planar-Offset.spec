@@ -1,0 +1,60 @@
+#
+# Conditional build:
+%bcond_without	tests	# do not perform "make test"
+#
+%include	/usr/lib/rpm/macros.perl
+%define	pdir	Math
+%define	pnam	Geometry-Planar-Offset
+Summary:	Math::Geometry::Planar::Offset - calculate offset polygons
+Summary(pl):	Math::Geometry::Planar::Offset - obliczanie wielok±tów offsetowych
+Name:		perl-Math-Geometry-Planar-Offset
+Version:	1.02
+Release:	1
+# same as perl + changes must be documented
+License:	GPL or Artistic
+Group:		Development/Languages/Perl
+Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	6f3fa47796a6aea34dfa0d60f39b866c
+BuildRequires:	perl-devel >= 5.8.0
+BuildRequires:	rpm-perlprov >= 4.1-13
+# not BR - loop
+Requires:	perl-Math-Geometry-Planar
+BuildArch:	noarch
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%description
+This module provides a polygon offsetting function. The offset
+calculated is a 'sharp cornered offset'. Both negative and positve
+offsets are supported.
+
+%description -l pl
+Ten modu³ dostarcza funkcjê do obliczania wielok±tów offsetowych.
+Obliczony offset jest "offsetem o ostrych rogach". Obs³ugiwane s±
+przesuniêcia dodatnie i ujemne.
+
+%prep
+%setup -q -n %{pdir}-%{pnam}-%{version}
+
+%build
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor
+
+%{__make}
+
+%{?with_tests:%{__make} test}
+
+%install
+rm -rf $RPM_BUILD_ROOT
+
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+%files
+%defattr(644,root,root,755)
+%doc Changes README
+%dir %{perl_vendorlib}/Math/Geometry/Planar
+%{perl_vendorlib}/Math/Geometry/Planar/Offset.pm
+%{_mandir}/man3/*
