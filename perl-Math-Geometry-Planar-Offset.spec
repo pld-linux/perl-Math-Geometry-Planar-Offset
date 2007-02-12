@@ -6,7 +6,7 @@
 %define		pdir	Math
 %define		pnam	Geometry-Planar-Offset
 Summary:	Math::Geometry::Planar::Offset - calculate offset polygons
-Summary(pl):	Math::Geometry::Planar::Offset - obliczanie wielok±tów offsetowych
+Summary(pl.UTF-8):   Math::Geometry::Planar::Offset - obliczanie wielokÄ…tÃ³w offsetowych
 Name:		perl-Math-Geometry-Planar-Offset
 Version:	1.03
 Release:	1
@@ -27,10 +27,10 @@ This module provides a polygon offsetting function. The offset
 calculated is a 'sharp cornered offset'. Both negative and positve
 offsets are supported.
 
-%description -l pl
-Ten modu³ dostarcza funkcjê do obliczania wielok±tów offsetowych.
-Obliczony offset jest "offsetem o ostrych rogach". Obs³ugiwane s±
-przesuniêcia dodatnie i ujemne.
+%description -l pl.UTF-8
+Ten moduÅ‚ dostarcza funkcjÄ™ do obliczania wielokÄ…tÃ³w offsetowych.
+Obliczony offset jest "offsetem o ostrych rogach". ObsÅ‚ugiwane sÄ…
+przesuniÄ™cia dodatnie i ujemne.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
