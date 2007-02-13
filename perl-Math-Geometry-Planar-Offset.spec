@@ -6,7 +6,7 @@
 %define		pdir	Math
 %define		pnam	Geometry-Planar-Offset
 Summary:	Math::Geometry::Planar::Offset - calculate offset polygons
-Summary(pl.UTF-8):   Math::Geometry::Planar::Offset - obliczanie wielokątów offsetowych
+Summary(pl.UTF-8):	Math::Geometry::Planar::Offset - obliczanie wielokątów offsetowych
 Name:		perl-Math-Geometry-Planar-Offset
 Version:	1.03
 Release:	1
