@@ -9,7 +9,7 @@ Summary:	Math::Geometry::Planar::Offset - calculate offset polygons
 Summary(pl.UTF-8):	Math::Geometry::Planar::Offset - obliczanie wielokątów offsetowych
 Name:		perl-Math-Geometry-Planar-Offset
 Version:	1.05
-Release:	2
+Release:	3
 # same as perl (README says it is Artistic only)
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -56,7 +56,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%dir %{perl_vendorlib}/Math/Geometry
 %dir %{perl_vendorlib}/Math/Geometry/Planar
 %{perl_vendorlib}/Math/Geometry/Planar/Offset.pm
 %{_mandir}/man3/*
